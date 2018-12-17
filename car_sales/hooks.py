@@ -55,7 +55,7 @@ app_license = "MIT"
 # ------------
 
 # before_install = "car_sales.install.before_install"
-# after_install = "car_sales.install.after_install"
+after_install = "car_sales.install.after_install"
 
 # Desk Notifications
 # ------------------
@@ -119,4 +119,9 @@ app_license = "MIT"
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "car_sales.event.get_events"
 # }
+
+doctype_js = {
+	"Customer" : "customizations/customer/customer.js",
+	"Quotation" : "customizations/quotation/quotation.js",
+}
 
