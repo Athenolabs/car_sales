@@ -14,6 +14,13 @@ def after_install():
 		'depends_on':'eval:doc.contact_no_car_sales',
 		'insert_after': 'contact_no_car_sales'
 	})
+	create_custom_field('Customer', {
+		'label': _('Create Contact Details'),
+		'fieldname': 'create_contact',
+		'fieldtype': 'Button',
+		'depends_on':'eval:!doc.__islocal',
+		'insert_after': 'fetch_customer_frm_si'
+	})
 	create_custom_field('Quotation', {
 		'label': _('Sales Inquiry'),
 		'fieldname': 'sales_inquiry',

@@ -15,5 +15,18 @@ frappe.ui.form.on("Customer", {
                 }
             }
         });
+    },
+    "create_contact":function(frm, cdt, cdn){
+        frappe.call({
+            method : "car_sales.utils.create_contact_from_si",
+            args : {
+                customer_no : frm.doc.contact_no_car_sales,
+                customer: frm.doc.name
+            },
+            callback : function(r){
+                if (r.message ){
+                }
+            }
+        });
     }
 })
